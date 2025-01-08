@@ -5,17 +5,34 @@ import './App.css'
 import MyClassComponent from './MyClassComponent'
 import StateComponent from './component/StateComponent'
 import PropsComponent from './component/PropsComponent'
+import FetchAPIComponent from './component/FetchAPIComponent'
+import Home from './(users)/Home/page'
+import About from './(users)/About/page'
+import Navbar from './component/Navbar'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
 
+      <div>
+        <h1>App</h1>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+        </Routes>
+      </div>
+
+      {FetchAPIComponent()}
+
+
+      {/* Modul  */}
       <MyClassComponent/>
       <StateComponent/>
       <PropsComponent name="John"/>
-      
+
 
       {/* <div>
         <a href="https://vite.dev" target="_blank">
