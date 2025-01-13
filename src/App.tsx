@@ -10,6 +10,7 @@ import Home from './(users)/Home/page'
 import About from './(users)/About/page'
 import Navbar from './component/Navbar'
 import { Route, Routes } from 'react-router-dom'
+import User from './(users)/User/page'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
+          <Route path="/users" element={<User/>}/>
         </Routes>
       </div>
 
@@ -29,9 +31,9 @@ function App() {
 
 
       {/* Modul  */}
-      <MyClassComponent/>
+      {/* <MyClassComponent/>
       <StateComponent/>
-      <PropsComponent name="John"/>
+      <PropsComponent name="John"/> */}
 
 
       {/* <div>
